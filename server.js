@@ -180,7 +180,7 @@ const generateRandomFood = () => {
 const greetings = [
   {
     "id": 0,
-    "text": "Holaaaaa! A las bots nos gusta saludar"
+    "text": "Holaaaaa! A las bots nos gusta saludar 🐐"
   },
   {
     "id": 1,
@@ -230,34 +230,46 @@ const selectRandomTypeOfText = () => {
   const numberOfText = Math.floor((Math.random() * 4) + 1);
   if (numberOfText === 1) {
     const numberOfRiddle = randomIntFromInterval(0, 22);
-    generateNewTweet(riddles, numberOfRiddle);
     console.log('riddle', numberOfRiddle);
-    return numberOfRiddle;
+    return generateNewTweet(riddles, numberOfRiddle);
   } else if (numberOfText === 2) {
     const numberOfGreeting = randomIntFromInterval(0, 2);
-    generateNewTweet(greetings, numberOfGreeting);
     console.log('greeting', numberOfGreeting);
-    return numberOfGreeting;
+    return generateNewTweet(greetings, numberOfGreeting);
   } else if (numberOfText === 3) {
     const numberOfRefrain = randomIntFromInterval(0, 5);
-    generateNewTweet(refrains, numberOfRefrain);
     console.log('refrain', numberOfRefrain);
-    return numberOfRefrain;
+    return generateNewTweet(refrains, numberOfRefrain);
   } else {
     const numberOfEatFoods = randomIntFromInterval(0, 0);
-    generateNewTweet(eatFoods, numberOfEatFoods);
     console.log('eat food', numberOfEatFoods);
-    return numberOfEatFoods;
+    return generateNewTweet(eatFoods, numberOfEatFoods);
   }
 }
 
-selectRandomTypeOfText();
-
 //Send tweet to Twitter
-/*client.post('statuses/update', {status: newTweet})
-  .then(tweet => {
-    console.log(tweet);
-  })
-  .catch(error => {
-    console.log(error);
-  })*/
+const sendTweet = tweetToSend => {
+  client.post('statuses/update', {status: tweetToSend})
+    .then(tweet => {
+      console.log(tweet);
+    })
+    .catch(error => {
+      console.log(error);
+    })
+}
+
+const watchTimeAndSendTweet = () => {
+  const today = new Date();
+  const time = today.getHours() + ":" + today.getMinutes();
+  console.log(time);
+  //+ ":" + today.getSeconds()
+
+  if (time === '10:1' || time === '19:23') {
+    console.log('es la hora!');
+    const textTweet = selectRandomTypeOfText();
+    sendTweet(textTweet);
+  }
+};
+
+watchTimeAndSendTweet();
+
