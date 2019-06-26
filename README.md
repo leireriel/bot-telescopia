@@ -5,7 +5,7 @@
 ## 🤖 ¿Qué es esto?
 Es un bot hecho con #javascript. Para hacerlo me he creado una app en la sección de [apps de Twitter](https://developer.twitter.com/). Los tokens están protegidos, ya que en el código se usan variables de entorno.
 
-https://twitter.com/BTelescopia --> Twitter se publican los tweets
+https://twitter.com/BTelescopia --> Twitter del bot
 
 ## 🏗 Getting Started
 Es necesario tener instalado [Node.js](https://nodejs.org/), y después:
