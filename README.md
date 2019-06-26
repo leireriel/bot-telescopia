@@ -1,9 +1,11 @@
 # Hola! Me llamo Telescopia y soy una bot hecha con javascript
 
-![Telescopia](./images/bot_Telescopia.jpg)
+![Telescopia](./images/bot_Telescopia.jpg =250x)
 
 ## 🤖 ¿Qué es esto?
 Es un bot hecho con #javascript. Para hacerlo me he creado una app en la sección de [apps de Twitter](https://developer.twitter.com/). Los tokens están protegidos, ya que en el código se usan variables de entorno.
+
+https://twitter.com/BTelescopia --> Twitter se publican los tweets
 
 ## 🏗 Getting Started
 Es necesario tener instalado [Node.js](https://nodejs.org/), y después:
@@ -16,7 +18,7 @@ Es necesario tener instalado [Node.js](https://nodejs.org/), y después:
 * [cross-env](https://www.npmjs.com/package/cross-env) - Para ejecutar scripts que establecen y utilizan variables de entorno en todas las plataformas.
 * [dotenv](https://www.npmjs.com/package/dotenv) - Módulo de dependencia cero que carga variables de entorno desde un archivo .env en process.env.
 
-# 🤜🤛 Sugerencias
+# 🙌 Sugerencias
 Todas las sugerencias son bienvenidas, puedes abrir una issue :)
 
-Gracias 💜
+Gracias 💙
