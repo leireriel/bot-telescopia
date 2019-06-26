@@ -264,7 +264,7 @@ const watchTimeAndSendTweet = () => {
   console.log(time);
   //+ ":" + today.getSeconds()
 
-  if (time === '10:1' || time === '19:23') {
+  if (time === '10:1' || time === '19:1') {
     console.log('es la hora!');
     const textTweet = selectRandomTypeOfText();
     sendTweet(textTweet);
