@@ -1,0 +1,26 @@
+{
+  "name": "bot-telescopia",
+  "version": "1.0.0",
+  "description": "* node\r * js\r * npm init --yes; npm i twitter\r * dependencies: twitter\r * create developer account on twitter\r * variables de entorno para tokens de twitter= paquete de node npm i cross-env; npm i dotenv",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/leireriel/bot-telescopia.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/leireriel/bot-telescopia/issues"
+  },
+  "homepage": "https://github.com/leireriel/bot-telescopia#readme",
+  "dependencies": {
+    "cross-env": "^5.2.0",
+    "dotenv": "^8.0.0",
+    "twitter": "^1.7.1"
+  }
+}
