@@ -150,16 +150,19 @@ const generateNewTweet = (type, number) => {
   newTweet = type.filter(element => element.id === number);
   newTweet = newTweet[0].text;
 
-  if (type === greetings) {
-    if (newTweet.includes('comer')) {
-      const getFood = generateRandomFood();
-      const finalTweet = `${newTweet} ${getFood}`;
-      console.log(finalTweet);
-      return finalTweet;
-    } else {
-      console.log(newTweet);
-      return newTweet;
-    }
+  if (type === riddles) {
+    const finalTweet = `${newTweet} #adivinaAdivinanza`;
+    console.log(finalTweet);
+    return finalTweet;
+  } else if (type === refrains) {
+    const finalTweet = `${newTweet} #refranes`;
+    console.log(finalTweet);
+    return finalTweet;
+  } else if (type === eatFoods) {
+    const getFood = generateRandomFood();
+    const finalTweet = `${newTweet} ${getFood}`;
+    console.log(finalTweet);
+    return finalTweet;
   } else {
     console.log(newTweet);
     return newTweet;
@@ -185,24 +188,66 @@ const greetings = [
   },
   {
     "id": 2,
-    "text": "Me gusta comer"
-  },
-  {
-    "id": 3,
     "text": "Soy un bot-ón"
   },
 ]
 
+const eatFoods = [
+  {
+    "id": 0,
+    "text": "Me gusta comer"
+  },
+]
+
+const refrains = [
+  {
+    "id": 0,
+    "text": "Burro grande, ande o no ande."
+  },
+  {
+    "id": 1,
+    "text": "Cuando menos se piensa, salta la liebre."
+  },
+  {
+    "id": 2,
+    "text": "Dame pan y dime tontoa."
+  },
+  {
+    "id": 3,
+    "text": "En todas partes cuecen habas."
+  },
+  {
+    "id": 4,
+    "text": "Échale harina al pavo."
+  },
+  {
+    "id": 5,
+    "text": "Vísteme despacio que tengo prisa."
+  },
+];
+
 const selectRandomTypeOfText = () => {
-  const numberOfText = Math.floor((Math.random() * 2) + 1);
+  const numberOfText = Math.floor((Math.random() * 4) + 1);
   if (numberOfText === 1) {
     const numberOfRiddle = randomIntFromInterval(0, 22);
     generateNewTweet(riddles, numberOfRiddle);
     console.log('riddle', numberOfRiddle);
-  } else {
-    const numberOfGreeting = randomIntFromInterval(0, 3);
+    return numberOfRiddle;
+  } else if (numberOfText === 2) {
+    const numberOfGreeting = randomIntFromInterval(0, 2);
     generateNewTweet(greetings, numberOfGreeting);
     console.log('greeting', numberOfGreeting);
+    return numberOfGreeting;
+  } else if (numberOfText === 3) {
+    const numberOfRefrain = randomIntFromInterval(0, 5);
+    generateNewTweet(refrains, numberOfRefrain);
+    console.log('refrain', numberOfRefrain);
+    return numberOfRefrain;
+  } else {
+    const numberOfEatFoods = randomIntFromInterval(0, 0);
+    generateNewTweet(eatFoods, numberOfEatFoods);
+    console.log('eat food', numberOfEatFoods);
+    return numberOfEatFoods;
   }
 }
 
