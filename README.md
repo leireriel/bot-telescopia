@@ -1,6 +1,6 @@
 # Hola! Me llamo Telescopia y soy una bot hecha con javascript
 
-![Telescopia](images/bot_Telescopia.jpg){:height="36px" width="36px"}
+![Telescopia](images/bot_Telescopia.jpg =100x20)
 
 ## 🤖 ¿Qué es esto?
 Es un bot hecho con #javascript. Para hacerlo me he creado una app en la sección de [apps de Twitter](https://developer.twitter.com/). Los tokens están protegidos, ya que en el código se usan variables de entorno.
