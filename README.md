@@ -1,6 +1,6 @@
 # Hola! Me llamo Telescopia y soy una bot hecha con javascript
 
-![Telescopia](images/bot_Telescopia.jpg =250x)
+![Telescopia](images/bot_Telescopia.jpg =250px)
 <img src="images/bot_Telescopia.jpg =250x" alt="Telescopia" width="200"/>
 
 ## 🤖 ¿Qué es esto?
