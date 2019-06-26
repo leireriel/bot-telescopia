@@ -218,7 +218,7 @@ const refrains = [
   },
   {
     "id": 4,
-    "text": "Échale harina al pavo."
+    "text": "Échele harina al pavo."
   },
   {
     "id": 5,
